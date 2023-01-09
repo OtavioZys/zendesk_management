@@ -29,3 +29,22 @@ def checa_id(log_id):
         return True
     else:
         return False
+ 
+def segundo():
+    segundo = int(datetime.now().strftime('%S'))
+    
+    return segundo
+
+agora = segundo()
+while agora < 60:
+   novo_agora = segundo()
+   if novo_agora == 15 or novo_agora == 30 or novo_agora == 45 or novo_agora == 59:
+        pass
+    else:
+        teste = get_log()
+        created = teste['id']
+        checa = checa_id(created)
+        if checa:
+            pass
+        else:
+            print(get_log())
